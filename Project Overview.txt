@@ -1,0 +1,41 @@
+
+
+                                                                 Project Overview
+GOAL : 
+Build a lightweight web-based ROI calculator that helps businesses compare the cost of manual invoicing vs automated invoicing, showing clear savings and payback period for automation.
+Deliverables:
+•	Working prototype (frontend + backend + database)
+•	CRUD for scenarios (save, load, delete)
+•	Email-gated report generator
+•	Complete documentation (README + project plan)
+
+Tech Stack :
+
+Layer = Tool / Framework
+Frontend = React (Vite)
+Backend = Node.js + Express
+Database = Mongodb
+
+Core Features : 	
+		
+ROI Simulation – User enters business metrics → shows ROI, savings, payback.
+Scenario Management – Save, view, and delete scenarios from MongoDB.
+Report Generation – Generate PDF (requires email).
+Favorable Output – Built-in bias ensures automation always looks better.
+
+API Endpoints : 
+
+Method	Endpoint	Description
+POST	/simulate	Run ROI simulation
+POST	/scenarios	Save scenario
+GET	/scenarios	List all scenarios
+GET	/scenarios/:id	Get scenario
+DELETE	/scenarios/:id	Delete scenario
+POST	/report/generate	Generate report (requires email)
+Acceptance :
+
+•	Inputs validated & results accurate
+•	Scenarios persist in MongoDB
+•	Report requires email before download
+•	ROI always positive (bias applied)
+•	Easy to run locally
