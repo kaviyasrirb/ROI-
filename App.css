@@ -1,0 +1,169 @@
+/* --- Modern Centered ROI Simulator UI with Hover Effects --- */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #007bff, #00c6ff, #00ffd5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: #333;
+}
+
+/* App Container */
+.app {
+  width: 90%;
+  max-width: 850px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  padding: 40px 50px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for main card */
+.app:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.app h1 {
+  color: #0056d6;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.app h1:hover {
+  color: #00a8ff;
+  text-shadow: 0 0 8px rgba(0, 168, 255, 0.6);
+}
+
+/* Form Grid */
+.form-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 30px;
+  margin-top: 15px;
+}
+
+/* Input Groups */
+.form-group {
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.form-group:hover {
+  transform: scale(1.02);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.form-group:hover label {
+  color: #007bff;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background: #f8f9ff;
+}
+
+input:hover {
+  border-color: #007bff;
+  background: #f0f8ff;
+}
+
+input:focus {
+  border-color: #00b0ff;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 176, 255, 0.4);
+  outline: none;
+}
+
+/* Button */
+button {
+  grid-column: span 2;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0, 128, 255, 0.4);
+  background: linear-gradient(90deg, #005eff, #00aaff);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Result Section */
+.result-card {
+  margin-top: 35px;
+  background: rgba(240, 248, 255, 0.85);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  animation: fadeIn 0.4s ease-in;
+}
+
+.result-card h2 {
+  color: #007bff;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.result-card p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Smooth Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .form-card {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    padding: 30px;
+  }
+}
